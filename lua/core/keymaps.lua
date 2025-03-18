@@ -3,7 +3,7 @@ local keymap = vim.keymap
 
 -- -------- 插入模式 -------- --
 keymap.set("i","jk","<ESC>")
-
+keymap.set("i","<C-z>","<ESC>ui")
 
 -- -------- 视觉模式 -------- -- 
 keymap.set("v","J",":m '>+1<CR>gv=gv")
@@ -23,5 +23,5 @@ keymap.set("n","<leader>nh",":nohl<CR>")
 keymap.set("n","<leader>e",":Neotree toggle<CR>")
 
 -- bufferline
-keymap.set("n","<C-Y>",":bnext<CR>")
-keymap.set("n","<C-I>",":bprevious<CR>")
+keymap.set("n","<C-I>",":bnext<CR>")
+keymap.set("n","<C-Y>",":bprevious<CR>")

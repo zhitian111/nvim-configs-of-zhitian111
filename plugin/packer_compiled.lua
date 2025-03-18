@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/zhitian/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/zhitian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/home/zhitian/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?/init.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?.lua;/home/zhitian/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/zhitian/.cache/nvim/packer_hererocks/2.1.1713484068/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -104,6 +104,12 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["fittencode.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fittencode\frequire\0" },
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/fittencode.nvim",
+    url = "https://github.com/luozhiya/fittencode.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -138,6 +144,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -180,6 +191,11 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -190,6 +206,11 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -198,6 +219,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: fittencode.nvim
+time([[Config for fittencode.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fittencode\frequire\0", "config", "fittencode.nvim")
+time([[Config for fittencode.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

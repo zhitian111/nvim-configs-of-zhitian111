@@ -54,7 +54,18 @@ return require('packer').startup(function(use)
   use {
       "nvim-telescope/telescope.nvim",
       requires = {{'nvim-lua/plenary.nvim'}}
-  }  
+  }
+  use 'voldikss/vim-floaterm' -- 悬浮终端
+  --use 'ms-jpq/chadtree'       -- 另一个文件树
+  --use 'neoclide/coc.nvim'  -- 高亮
+  use 'majutsushi/tagbar'   -- 浏览一个文件中的所有函数
+  use {
+    'luozhiya/fittencode.nvim',
+    config = function()
+      require('fittencode').setup()
+    end,
+ }
+  use 'jose-elias-alvarez/null-ls.nvim' -- 代码格式化
 -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

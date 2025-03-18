@@ -13,9 +13,9 @@ require("mason-lspconfig").setup{
     "lua_ls",       -- lua
     "ast_grep",     -- c
     "harper_ls",    -- c++
-    "clanged",
+    "clangd",
     "cmake",        -- cmake
-    "css_variables",-- css
+    "css_ls",       -- css
     "bashls",       -- bash
     "dockerls",     -- docker
     "flux_lsp",     -- flux
@@ -25,19 +25,77 @@ require("mason-lspconfig").setup{
     "jsonls",       -- json
     "ltex",         -- latex
     "grammarly",    -- markdown
-    "vacuum",       -- openapi
+    "spectral",     -- openapi
     "glsl_analyzer",-- opengl
-    "pylyzer",      -- python
+    "pyright",      -- python
     "sqlls",        -- sql
     "glint",        -- typescript
     "lemminx",      -- xml
-    "yamlls"        -- yaml
+    "yamlls",       -- yaml
+    "rust_analyzer",-- rust
+    "gopls",        -- go
+    "tsserver",     -- typescript
   },
 }
 
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-require("lspconfig").sumneko_lua.setup{
+require("lspconfig").lua_ls.setup{
   capabilities = capabilities,
 }
+require("lspconfig").clangd.setup{
+  capabilities = capabilities,
+  cmd = {"clangd", "--background-index"}
+}
+require("lspconfig").rust_analyzer.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").gopls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").html.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").cssls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").jsonls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").bashls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").dockerls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").html.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").jdtls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").eslint.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").ltex.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").pyright.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").sqlls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").lemminx.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").yamlls.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").spectral.setup{
+  capabilities = capabilities,
+}
+require("lspconfig").glslls.setup{
+  capabilities = capabilities,
+}
+

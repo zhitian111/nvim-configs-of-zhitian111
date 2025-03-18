@@ -36,5 +36,23 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+require("tokyonight").setup({
+	transparent = true,
+	-- style = "night",
+	-- nord_contrast = true,
+	-- nord_borders = true,
+	-- nord_inverse = true,
+	-- nord_disable_background = true,
+	-- nord_dimmed_comments = true,
+	-- nord_transparent_background = true,
+	-- nord_disable_netrw = true,
+	-- nord_disable_nordic = true,
+	-- nord_disable_italics = true,
+})
 vim.cmd[[colorscheme tokyonight-moon]]
 
+
+-- 刷新速度
+-- Neovim default updatetime is 4000
+vim.opt.updatetime = 200
