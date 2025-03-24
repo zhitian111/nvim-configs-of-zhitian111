@@ -6,17 +6,44 @@
 本人目前使用的插件管理器为packer，如果您有对于其他插件管理器(如lazy等)的偏好，可以仅参考插件选择和插件的配置。
 因为已经设置了autocmd，所以只需要在修改完./lua/plugins/plugins-setup.lua中的插件列表后保存文件(:w注意不要退出)即可触发插件的自动安装和更新。
 ## 前置软件
-如果你的电脑上没有git，请务必先安装git。否则插件管理器无法使用。以Ubuntu为例，可以使用以下命令安装git：
+如果您的电脑上没有git，请务必先安装git。否则插件管理器无法使用。以Ubuntu为例，可以使用以下命令安装git：
 ```bash
 sudo apt install git
 ```
 ## 使用方法
+### 下载配置文件
 方法1：直接克隆仓库到本地配置文件目录：
 ```bash
 git clone https://github.com/zhitian111/nvim-configs-of-zhitian111.git ~/.config/nvim
 ```
-方法2：下载zip压缩包，解压到本地配置文件目录：
+ps:请确保~/.config/nvim目录不存在，或其中的内容为空，或您已备份自己的配置文件，因为这个操作会覆盖原有配置文件。
+方法3：克隆到临时目录，手动复制到配置文件目录：
+```bash
+git clone https://github.com/zhitian111/nvim-configs-of-zhitian111.git
+```
+复制请使用命令行或文件管理器，注意事项同上。复制的参考命令如下：
+```bash
+cp -r ./nvim-configs-of-zhitian111/ ~/.config/nvim/
+```
+ps:不要忘记清理临时下载的仓库。
+方法3：下载zip压缩包，解压到本地配置文件目录：
 请将解压后的所有文件放入~/.config/nvim目录下。
+### 安装插件
+方法1：
+在neovim中运行命令：
+```bash
+:PackerSync
+```
+方法2：
+使用neovim打开配置文件，执行保存命令：
+```bash
+neovim ~/.config/nvim/lua/plugins/plugins-setup.lua
+```
+```bash
+:w
+```
+然后会开始自动安装插件，等待完成后，按q退出安装界面。退出后，重新打开neovim，即可使用插件。
+ps:因为插件会从github上下载，所以请注意一下网络环境。
 # 字体设置
 因为一些字符的原因，请务必使用nerd-font系列的字体。
 关于nerd-font的下载，请参考[这里](https://www.nerdfonts.com/)。
