@@ -10,6 +10,13 @@
 ```bash
 sudo apt install git
 ```
+## 使用方法
+方法1：直接克隆仓库到本地配置文件目录：
+```bash
+git clone https://github.com/zhitian111/nvim-configs-of-zhitian111.git ~/.config/nvim
+```
+方法2：下载zip压缩包，解压到本地配置文件目录：
+请将解压后的所有文件放入~/.config/nvim目录下。
 # 字体设置
 因为一些字符的原因，请务必使用nerd-font系列的字体。
 关于nerd-font的下载，请参考[这里](https://www.nerdfonts.com/)。
