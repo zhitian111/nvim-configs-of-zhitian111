@@ -8,7 +8,7 @@
 ## 前置软件
 如果你的电脑上没有git，请务必先安装git。否则插件管理器无法使用。以Ubuntu为例，可以使用以下命令安装git：
 ```bash
-sudo apt install
+sudo apt install git
 ```
 # 字体设置
 因为一些字符的原因，请务必使用nerd-font系列的字体。
