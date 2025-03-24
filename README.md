@@ -63,7 +63,7 @@ ps:我主要使用的字体是Hack Nerd Font和Fira Code Nerd Font.
 22. [luozhiya/fittencode.nvim](https://github.com/luozhiya/fittencode.nvim)
 23. [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
     - 前置插件：
-        [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) 
+        1. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) 
 24. [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 25. [gen740/SmoothCursor.nvim](https://github.com/gen740/SmoothCursor.nvim)
 26. [karb94/neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
