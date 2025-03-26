@@ -64,6 +64,36 @@ nvim ~/.config/nvim/lua/plugins/plugins-setup.lua
 ```
 然后会开始自动安装插件，等待完成后，按q退出安装界面。退出后，重新打开neovim，即可使用插件。
 ps:因为插件会从github上下载，所以请注意一下网络环境。
+### 安装语言服务器依赖或更改语言服务器配置
+因为我的语言服务器的设置，需要安装一些依赖，如nodejs、python、go等。
+如果您明白如何配置语言服务器，可以自行更改./lua/plugins/lsp.lua和./lua/plugins/cmp.lua中的配置。
+如果您不知道如何配置，请不要修改这两个文件，而是使用默认配置。
+为了完成其中语言服务器的安装，需要安装以下依赖：
+- npm :
+```bash
+sudo apt install npm
+```
+- python3:
+```bash
+sudo apt install python3
+```
+- go:
+```bash
+sudo apt install golang-go
+```
+- cargo
+```bash
+sudo apt install cargo
+```
+- java
+```bash
+sudo apt install default-jre
+```
+- clangd
+```bash
+sudo apt install clangd
+```
+可能列举的依赖并不全面，请根据您的系统环境和日志、提示信息等自行安装。
 # 字体设置
 因为一些字符的原因，请务必使用nerd-font系列的字体。
 关于nerd-font的下载，请参考[这里](https://www.nerdfonts.com/)。
@@ -127,3 +157,4 @@ ps:我主要使用的字体是Hack Nerd Font和Fira Code Nerd Font.
     - 前置插件：
         1. [rmagatti/logger.nvim](https://github.com/rmagatti/logger.nvim)
 35. [petertriho/nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
+36. [jghauser/fold-cycle.nvim](https://github.com/jghauser/fold-cycle.nvim)

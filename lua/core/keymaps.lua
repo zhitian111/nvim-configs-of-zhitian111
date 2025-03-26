@@ -22,9 +22,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 
 -- bufferline
-keymap.set("n", "<C-I>", ":bnext<CR>")
-keymap.set("n", "<C-Y>", ":bprevious<CR>")
-
+keymap.set("n", "<leader>I", ":bnext<CR>")
+keymap.set("n", "<leader>Y", ":bprevious<CR>")
+keymap.set("n", "<leader>d", ":bd<CR>")
+keymap.set("n", "<tab>", ":bnext<CR>")
 -- 通过lsp在输入分号时自动格式化该行
 -- 格式化本行的代码
 local function fomat_current_line()
@@ -53,7 +54,7 @@ end
 keymap.set("i", ";;", "", { noremap = true, callback = fomat_current_line })
 
 -- fold-cycle
-vim.keymap.set("n", "<tab>", function()
+vim.keymap.set("n", "<s-tab>", function()
 	return require("fold-cycle").open()
 end, { silent = true, desc = "Fold-cycle: open folds" })
 vim.keymap.set("n", "<s-tab>", function()
