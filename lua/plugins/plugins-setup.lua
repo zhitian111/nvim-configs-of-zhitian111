@@ -77,6 +77,11 @@ return require("packer").startup(function(use)
 	use("ya2s/nvim-cursorline") -- 高亮当前行和单词
 	use("sphamba/smear-cursor.nvim") -- 光标拖影
 	use("norcalli/nvim-colorizer.lua") -- 颜色预览
+	use({ -- 代码对齐
+		"Vonr/align.nvim",
+		branch = "v2",
+	})
+	use({ "sitiom/nvim-numbertoggle" }) -- 在不同窗口切换时保留行号
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'

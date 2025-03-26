@@ -28,6 +28,26 @@ cp -r ./nvim-configs-of-zhitian111/ ~/.config/nvim/
 ps:不要忘记清理临时下载的仓库。
 方法3：下载zip压缩包，解压到本地配置文件目录：
 请将解压后的所有文件放入~/.config/nvim目录下。
+### 安装Packer
+如果你还没有安装packer，请先安装packer。
+方法1：
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+方法2：
+使用配置文件自动安装：
+```bash
+nvim ~/.config/nvim/lua/plugins/plugins-setup.lua
+```
+```
+:so
+```
+方法3：
+使用在终端中运行以下neovim命令完成自动安装：
+```bash
+$ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+```
 ### 安装插件
 方法1：
 在neovim中运行命令：
@@ -37,7 +57,7 @@ ps:不要忘记清理临时下载的仓库。
 方法2：
 使用neovim打开配置文件，执行保存命令：
 ```bash
-neovim ~/.config/nvim/lua/plugins/plugins-setup.lua
+nvim ~/.config/nvim/lua/plugins/plugins-setup.lua
 ```
 ```bash
 :w
@@ -97,3 +117,5 @@ ps:我主要使用的字体是Hack Nerd Font和Fira Code Nerd Font.
 27. [ya2s/nvim-cursorline](https://github.com/ya2s/nvim-cursorline)
 28. [sphamba/smear-cursor.nvim](https://github.com/sphamba/smear-cursor.nvim)
 29. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+30. [Vonr/align.nvim](https://github.com/Vonr/align.nvim)
+31. [sitiom/nvim-numbertoggle](https://github.com/sitiom/nvim-numbertoggle)
