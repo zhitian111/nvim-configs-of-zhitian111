@@ -90,6 +90,17 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/SmoothCursor.nvim",
     url = "https://github.com/gen740/SmoothCursor.nvim"
   },
+  ["align.nvim"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/align.nvim",
+    url = "https://github.com/Vonr/align.nvim"
+  },
+  ["bookmarks.nvim"] = {
+    config = { "\27LJ\2\nN\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\14bookmarks\19load_extension\14telescope\frequire\0" },
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/bookmarks.nvim",
+    url = "https://github.com/crusj/bookmarks.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -110,11 +121,22 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   ["fittencode.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fittencode\frequire\0" },
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/fittencode.nvim",
     url = "https://github.com/luozhiya/fittencode.nvim"
+  },
+  ["fold-cycle.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fold-cycle\frequire\0" },
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/fold-cycle.nvim",
+    url = "https://github.com/jghauser/fold-cycle.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -126,10 +148,28 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["glance.nvim"] = {
+    commands = { "Glance" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/opt/glance.nvim",
+    url = "https://github.com/dnlhc/glance.nvim"
+  },
+  ["goto-preview"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/goto-preview",
+    url = "https://github.com/rmagatti/goto-preview"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["logger.nvim"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/logger.nvim",
+    url = "https://github.com/rmagatti/logger.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -191,6 +231,16 @@ _G.packer_plugins = {
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-numbertoggle"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nvim-numbertoggle",
+    url = "https://github.com/sitiom/nvim-numbertoggle"
+  },
+  ["nvim-scrollbar"] = {
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
+    url = "https://github.com/petertriho/nvim-scrollbar"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -202,9 +252,8 @@ _G.packer_plugins = {
     url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/zhitian/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/zhitian/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -250,6 +299,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: fold-cycle.nvim
+time([[Config for fold-cycle.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fold-cycle\frequire\0", "config", "fold-cycle.nvim")
+time([[Config for fold-cycle.nvim]], false)
+-- Config for: bookmarks.nvim
+time([[Config for bookmarks.nvim]], true)
+try_loadstring("\27LJ\2\nN\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\14bookmarks\19load_extension\14telescope\frequire\0", "config", "bookmarks.nvim")
+time([[Config for bookmarks.nvim]], false)
 -- Config for: SmoothCursor.nvim
 time([[Config for SmoothCursor.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17smoothcursor\frequire\0", "config", "SmoothCursor.nvim")
@@ -258,6 +315,18 @@ time([[Config for SmoothCursor.nvim]], false)
 time([[Config for fittencode.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15fittencode\frequire\0", "config", "fittencode.nvim")
 time([[Config for fittencode.nvim]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'Glance', function(cmdargs)
+          require('packer.load')({'glance.nvim'}, { cmd = 'Glance', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'glance.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Glance ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

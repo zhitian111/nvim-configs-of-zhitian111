@@ -21,7 +21,7 @@ return require("packer").startup(function(use)
 	use("folke/tokyonight.nvim") --主题
 	use({
 		"nvim-lualine/lualine.nvim", --状态栏
-		requires = { "kyazdani42/nvim-web-devicons", opt = true }, --状态栏图标
+		requires = { "kyazdani42/nvim-web-devicons" }, --状态栏图标
 	})
 	use({ --文件树
 		"nvim-neo-tree/neo-tree.nvim",
@@ -82,11 +82,30 @@ return require("packer").startup(function(use)
 		branch = "v2",
 	})
 	use({ "sitiom/nvim-numbertoggle" }) -- 在不同窗口切换时保留行号
-	-- My plugins here
-	-- use 'foo1/bar1.nvim'
-	-- use 'foo2/bar2.nvim'
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
+	use({ -- 书签
+		"crusj/bookmarks.nvim",
+		branch = "main",
+		requires = { "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("telescope").load_extension("bookmarks")
+		end,
+	})
+	use({ -- 代码引用和定义预览
+		"dnlhc/glance.nvim",
+		-- cmd = "Glance",
+	})
+	use("sindrets/diffview.nvim") -- git diff
+	use({ -- 浮动窗口代码引用和定义预览
+		"rmagatti/goto-preview",
+		requires = { "rmagatti/logger.nvim" },
+	})
+	use("petertriho/nvim-scrollbar") -- 右侧滚动条
+	use({
+		"jghauser/fold-cycle.nvim",
+		config = function()
+			require("fold-cycle").setup()
+		end,
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end

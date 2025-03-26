@@ -119,3 +119,11 @@ ps:我主要使用的字体是Hack Nerd Font和Fira Code Nerd Font.
 29. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
 30. [Vonr/align.nvim](https://github.com/Vonr/align.nvim)
 31. [sitiom/nvim-numbertoggle](https://github.com/sitiom/nvim-numbertoggle)
+32. [crusj/bookmarks.nvim](https://github.com/crusj/bookmarks.nvim)
+    - 前置插件：
+         1. [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+33. [sindrets/diffview.nvim](https://github.com/sindrets/diffview.nvim)
+34. [rmagatti/goto-preview](https://github.com/rmagatti/goto-preview)
+    - 前置插件：
+        1. [rmagatti/logger.nvim](https://github.com/rmagatti/logger.nvim)
+35. [petertriho/nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
